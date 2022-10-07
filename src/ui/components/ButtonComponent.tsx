@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Pressable, Text } from 'react-native'
-import SharedStyles from '../SharedStyles'
+import SharedStyles from '../../SharedStyles'
 
 type ButtonProps = {
   label: string

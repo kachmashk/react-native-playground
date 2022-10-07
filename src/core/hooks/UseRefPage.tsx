@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef, useState } from 'react'
 import { Text, TextInput, View } from 'react-native'
-import SharedStyles from '../SharedStyles'
+import SharedStyles from '../../SharedStyles'
 
 const UseRefPage: FC = () => {
   const [inputValue, setInputValue] = useState<string>('')

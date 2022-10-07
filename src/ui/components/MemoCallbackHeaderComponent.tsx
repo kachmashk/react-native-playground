@@ -1,6 +1,6 @@
 import React, { FC, memo } from 'react'
-import { Pressable, Text, View } from 'react-native'
-import SharedStyles from '../SharedStyles'
+import { Text, View } from 'react-native'
+import SharedStyles from '../../SharedStyles'
 import ButtonComponent from './ButtonComponent'
 
 type MemoCallbackHeaderProps = {

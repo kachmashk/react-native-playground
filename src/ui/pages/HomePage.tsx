@@ -2,8 +2,8 @@ import React, { FC } from 'react'
 import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
-import SharedStyles from './SharedStyles'
-import ButtonComponent from './components/ButtonComponent'
+import SharedStyles from '../../SharedStyles'
+import ButtonComponent from '../components/ButtonComponent'
 
 const HomePage: FC = () => {
   const navigation = useNavigation<StackNavigationProp<any>>()
@@ -28,6 +28,11 @@ const HomePage: FC = () => {
       <ButtonComponent
         label="useMemo"
         onPress={() => navigation.navigate('useMemo')}
+      />
+
+      <ButtonComponent
+        label="Profile"
+        onPress={() => navigation.navigate('Profile')}
       />
     </View>
   )

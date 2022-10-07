@@ -1,19 +1,20 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import HomePage from './HomePage'
-import UseCallbackPage from './hooks/UseCallbackPage'
-import UseMemoPage from './hooks/UseMemoPage'
-import SharedStyles from './SharedStyles'
-import MemoPage from './hooks/MemoPage'
-import UseRefPage from './hooks/UseRefPage'
+import { Provider } from 'react-redux'
+import store from './core/redux/store'
+import HomePage from './ui/pages/HomePage'
+import UseCallbackPage from './core/hooks/UseCallbackPage'
+import UseMemoPage from './core/hooks/UseMemoPage'
+import MemoPage from './core/hooks/MemoPage'
+import UseRefPage from './core/hooks/UseRefPage'
+import ProfilePage from './ui/pages/ProfilePage'
 
 const Stack = createNativeStackNavigator()
 
 const App = () => {
   return (
-    <SafeAreaView edges={['top', 'bottom']} style={SharedStyles.safeAreaView}>
+    <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomePage} />
@@ -21,9 +22,10 @@ const App = () => {
           <Stack.Screen name="useMemo" component={UseMemoPage} />
           <Stack.Screen name="memo" component={MemoPage} />
           <Stack.Screen name="useRef" component={UseRefPage} />
+          <Stack.Screen name="Profile" component={ProfilePage} />
         </Stack.Navigator>
       </NavigationContainer>
-    </SafeAreaView>
+    </Provider>
   )
 }
 

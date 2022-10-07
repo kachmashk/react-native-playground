@@ -1,8 +1,8 @@
-import React, { FC, useCallback, useMemo, useState } from 'react'
+import React, { FC, useMemo, useState } from 'react'
 import { Text, View } from 'react-native'
-import SharedStyles from '../SharedStyles'
-import ToDoListComponent from '../components/ToDoListComponent'
-import MemoCallbackHeaderComponent from '../components/MemoCallbackHeaderComponent'
+import SharedStyles from '../../SharedStyles'
+import MemoCallbackHeaderComponent from '../../ui/components/MemoCallbackHeaderComponent'
+import ToDoListComponent from '../../ui/components/ToDoListComponent'
 
 const UseMemoPage: FC = () => {
   const [count, setCount] = useState<number>(0)
